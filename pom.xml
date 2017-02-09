@@ -55,6 +55,7 @@
     <sonarSvn.version>1.4.0.522</sonarSvn.version>
     <sonarPhp.version>2.9.2.1744</sonarPhp.version>
     <sonarPython.version>1.7.0.1195</sonarPython.version>
+    <sonarFlex.version>2.3</sonarFlex.version>
     <h2.version>1.3.176</h2.version>
     <jetty.version>8.1.12.v20130726</jetty.version>
     <logback.version>1.1.7</logback.version>
@@ -639,6 +640,26 @@
           <exclusion>
             <groupId>org.codehaus.woodstox</groupId>
             <artifactId>woodstox-core-lgpl</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.sonarsource.flex</groupId>
+        <artifactId>sonar-flex-plugin</artifactId>
+        <version>${sonarFlex.version}</version>
+        <type>sonar-plugin</type>
+        <exclusions>
+          <!--
+          no need for transitive dependencies as only the JAR file
+          is needed for the zip bundle
+          -->
+          <exclusion>
+            <groupId>org.sonarsource.flex</groupId>
+            <artifactId>flex-squid</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.sonarsource.flex</groupId>
+            <artifactId>flex-checks</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
