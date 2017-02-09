@@ -67,7 +67,7 @@ public class ServerUserSession extends AbstractUserSession {
     this.userDto = userDto;
   }
 
-    private List<GroupDto> loadGroups() {
+  private List<GroupDto> loadGroups() {
     if (this.userDto == null) {
       return Collections.emptyList();
     }
