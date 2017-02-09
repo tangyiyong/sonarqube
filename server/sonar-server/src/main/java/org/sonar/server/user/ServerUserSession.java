@@ -170,7 +170,7 @@ public class ServerUserSession extends AbstractUserSession {
   }
 
   @Override
-  protected boolean isSystemAdministrator() {
+  public boolean isSystemAdministrator() {
     return isSystemAdministratorSupplier.get();
   }
 
